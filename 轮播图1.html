@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Author" content="网页作者" />
+    <meta name="Copyright" content="网站版权" />
+    <meta name="keywords" content="网站关键字" />
+    <meta name="description" content="网站描述" />
+    <title>轮播图</title>
+    <style>
+        *{margin: 0;padding: 0;text-decoration: none}
+        .banner{
+            position: relative;
+            margin: auto;
+            width: 1600px;
+            height: 900px;
+            box-shadow: 0 0 10px 0;
+        }
+        .banner img{
+            position: absolute;
+            width: 1600px;
+            height: 900px;
+            opacity: 0;
+        }
+        #img1{opacity: 1;}
+        .banner .buttons:after{content: "";display: block;clear: both;overflow: hidden}
+        .banner .buttons{position: absolute;top: 830px;left: 730px;z-index: 999}
+        .banner .buttons>a{
+            float: left;
+            margin:5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ccc
+        }
+        .banner .buttons>a:hover{background-color: aqua}
+        .banner> img:target{opacity: 1;}
+    </style>
+</head>
+<body>
+        <div class="banner">
+            <img id="img1" src="img/1.jpg" alt=""/>
+            <img id="img2" src="img/2.jpg" alt=""/>
+            <img id="img3" src="img/3.jpg" alt=""/>
+            <img id="img4" src="img/4.jpg" alt=""/>
+            <div class="buttons">
+                <a href="#img1"></a>
+                <a href="#img2"></a>
+                <a href="#img3"></a>
+                <a href="#img4"></a>
+            </div>
+
+        </div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Author" content="网页作者" />
+    <meta name="Copyright" content="网站版权" />
+    <meta name="keywords" content="网站关键字" />
+    <meta name="description" content="网站描述" />
+    <title>选项卡</title>
+    <style>
+        *{margin: 0;padding: 0;text-decoration: none;list-style: none}
+        .box{
+            width: 1200px;
+            height: 700px;
+            margin: 100px auto;
+            background-color: beige;
+        }
+        .box>input{display: none}
+        .box .label-box label{
+            display: inline-block;
+            width: 80px;
+            height: 30px;
+            text-align: center;
+            line-height: 30px;
+            border-radius: 5px 5px 0 0;
+            background-color: aquamarine
+        }
+        .box .label-box>label:nth-child(1){margin-left: 10px}
+        .box #a1:checked ~ .label-box>label:nth-child(1),
+        .box #a2:checked ~ .label-box>label:nth-child(2),
+        .box #a3:checked ~ .label-box>label:nth-child(3)
+        {
+            padding-top:5px ;
+            margin-top: -5px;
+            background-color: #ff3366;
+        }
+        .box>ul{
+            position: relative;
+            width:calc(100% - 20px);
+            height: 660px;
+            margin: 0 10px 10px 10px;
+            border-radius: 0 0 5px 5px;
+            background-color: #ff3366
+        }
+        .box>ul>li{
+            position: absolute;
+            left: 20px;
+            top:10px;
+            max-width: calc(100% - 40px);
+            font: 18px/30px "";
+            text-align: left;
+            color: #fff;
+            opacity: 0;
+        }
+        .box>ul>li>p{margin-top: 10px}
+        .box #a1:checked ~ ul>li:nth-child(1),
+        .box #a2:checked ~ ul>li:nth-child(2),
+        .box #a3:checked ~ ul>li:nth-child(3)
+        {opacity: 1}
+    </style>
+</head>
+<body>
+    <div>
+        <div class="box">
+            <input type="radio" name="nav" id="a1" checked/>
+            <input type="radio" name="nav" id="a2"/>
+            <input type="radio" name="nav" id="a3"/>
+            <div class="label-box">
+                <label for="a1">a1</label>
+                <label for="a2">a2</label>
+                <label for="a3">a3</label>
+            </div>
+            <ul>
+                <li><p>代表您已接受了本站的使用条款和隐私条代表您已接受了本站的使用条款和隐私条代表您已接受了本站的使用条款和隐私条代表您已接受了本站的使用条款和隐私条代表您已接受了本站的使用条款和隐私条</p>
+                    <p>代表您已接受了本站的使用条款和隐私条</p>
+                    <p>代表您已接受了本站的使用条款和隐私条</p>
+                    <p>代表您已接受了本站的使用条款和隐私条</p></li>
+                <li><p>代表您已接受了本站的使用条款和隐私条1</p>
+                    <p>代表您已接受了本站的使用条款和隐私条1</p>
+                    <p>代表您已接受了本站的使用条款和隐私条1</p>
+                    <p>代表您已接受了本站的使用条款和隐私条1</p></li>
+                <li><p>代表您已接受了本站的使用条款和隐私条2</p>
+                    <p>代表您已接受了本站的使用条款和隐私条2</p>
+                    <p>代表您已接受了本站的使用条款和隐私条2</p>
+                    <p>代表您已接受了本站的使用条款和隐私条2</p></li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
